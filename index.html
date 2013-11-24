@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<title>Threesome Ultimate Frisbee - Game</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <h1>Amsterdam Ultimate Autumn</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="#/schedule">Schedule</a></li>
+    <li><a href="#/pools">Pools</a></li>
+    <li><a href="#/ranking">Ranking</a></li>
+  </ul>
+</nav>
+<section data-route="schedule">
+  <header>
+    <h1>Schedule</h1>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Team 1</th>
+        <th>Score/Time</th>
+        <th>Team 2</th>
+      </tr>
+    </thead>
+    <tbody data-bind="objects">
+      <tr>
+        <td><a data-bind="link"><span data-bind="team_1_name"></span> </a></td>
+        <td><a data-bind="link"><span data-bind="score"></span><span data-bind="time"></span></a></td>
+        <td><a data-bind="link"><span data-bind="team_2_name"></span></a></td>
+      </tr>
+    </tbody>
+  </table>
+  <input class="back_to_top" type="button" value="Back to Top" />
+</section>
+<section data-route="pools">
+  <section data-bind="objects">
+    <header>
+      <h1>Pool <span data-bind="name"></span></h1>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>Won</th>
+          <th>Lost</th>
+          <th>PW</th>
+          <th>PL</th>
+          <th>+/-</th>
+        </tr>
+      </thead>
+      <tbody data-bind="standings">
+        <tr>
+          <td data-bind="team_name"></td>
+          <td data-bind="wins"></td>
+          <td data-bind="losses"></td>
+          <td data-bind="points_scored"></td>
+          <td data-bind="points_allowed"></td>
+          <td data-bind="plus_minus"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <input class="back_to_top" type="button" value="Back to Top" />
+</section>
+<section data-route="ranking">
+  <header>
+    <h1>Total Ranking</h1>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Won</th>
+        <th>Lost</th>
+        <th>PW</th>
+        <th>PL</th>
+        <th>+/-</th>
+      </tr>
+    </thead>
+    <tbody data-bind="objects">
+      <tr>
+        <td data-bind="team_name"></td>
+        <td data-bind="wins"></td>
+        <td data-bind="losses"></td>
+        <td data-bind="points_scored"></td>
+        <td data-bind="points_allowed"></td>
+        <td data-bind="plus_minus"></td>
+      </tr>
+    </tbody>
+  </table>
+  <input class="back_to_top" type="button" value="Back to Top" />
+</section>
+<section data-route="game">
+  <header> <a href="#/schedule">Back</a>
+    <h1 data-bind="game_title">
+  </header>
+  <section>
+    <h2 data-bind="team_1_name"></h2>
+    <input id="team_1_score" type="number" min="0" data-bind="team_1_score" />
+    <h2 data-bind="team_2_name"></h2>
+    <input id="team_2_score" type="number" min="0" data-bind="team_2_score" />
+    <input id="is_final" type="checkbox" />
+    Final score
+    <input type="submit" id="update_score" value="Update score" />
+    <div id="feedback"> </div>
+  </section>
+</section>
+<div id="left_swipe_trig"> </div>
+<div id="right_swipe_trig"> </div>
+<div id="loading"> <img src="img/loading.gif" alt="Loading.." /> </div>
+<script src="js/lib/routie.min.js"></script> 
+<script src="js/lib/ready.min.js" type="text/javascript"></script> 
+<script src="js/lib/qwery.min.js" type="text/javascript"></script> 
+<script src="js/lib/transparency.min.js" type="text/javascript"></script> 
+<script src="js/lib/reqwest.js" type="text/javascript"></script> 
+<script src="js/lib/date-utils.min.js" type="text/javascript"></script> 
+<script src="js/lib/hammer.min.js" type="text/javascript"></script> 
+<script src="js/lib/anim.min.js" type="text/javascript"></script> 
+<script src="js/app.js"></script>
+</body>
+</html>

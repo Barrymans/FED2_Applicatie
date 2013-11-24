@@ -1,0 +1,261 @@
+﻿html, body{
+	background-color: #fff;
+	font-family: Helvetica, Verdana, sans-serif; 
+    font-weight: normal; 
+    font-size: 16px;
+}
+body > header{
+	background-color: #469dff;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+}
+body > header > h1 {
+	color: #fff;
+	font-size: 1.6em;	
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #333;
+    height: 40px;
+    width: 100%;
+	text-align: center;	
+}
+nav ul {
+    display:inline-block;
+    font-size: 14px;
+}
+nav ul li {
+    display: inline-block;
+    float: left;
+}
+nav ul li a {
+    color: #FFFFFF;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+    text-decoration: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+nav ul li a:hover {
+	color: #333;
+	background-color: #fff;	
+}
+
+/* TABLE */
+
+table{
+	width: 100%;	
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 0.9em;	
+	font-weight: bold;		
+}
+table thead tr {
+	background-color: #333;		
+	line-height: 2em;
+	padding: 0.8em;	
+	color: #fff;
+}
+table tr {
+	background-color: #e3f0ff;
+	border-bottom: 1px solid #ccc;
+}
+table tr:nth-child(even){
+	background-color: #fff;
+}
+table td {
+	padding: 0.8em;
+	line-height: 1.5em;
+	text-align: center;	
+}
+table td a {
+	display:block;
+    height:100%;
+    width:100%;
+	color: #000;
+	text-decoration: none;		
+}
+
+/* CONTENT */
+
+body > section > header {
+	text-align: center;	
+}
+body > section {
+	display:none;
+	text-align: center;
+}
+body > section.active {
+	display:block;
+}
+body section h1 {
+	margin: 1em;
+	font-size: 1.6em;
+}
+
+/* SCHEDULE PAGE */
+
+body > section[data-route="schedule"] span[data-bind="time"] {
+	display: block;
+	clear: both;	
+	font-size: 0.8em;
+	font-weight: normal;
+}
+body > section[data-route="schedule"] table td {
+	padding: 0;
+	line-height: normal;
+}
+body > section[data-route="schedule"] table td a {
+	padding: 0.8em;
+	line-height: 1.5em;
+	text-align: center;	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* GAME PAGE */
+
+body > section[data-route="game"] > header {
+	width: 100%;
+	background-color: #999;
+	color: #fff;	
+	font-weight: bold;	
+	height: 1.8em;
+	line-height: 1.8em;
+}
+body > section[data-route="game"] > header > a {
+	float: left;
+	margin-left: 4%;
+	padding-left: 1.5em;
+	font-size: 0.8em;
+	font-weight: bold;	
+	text-decoration: none;
+	color: #fff;	
+	background: url(../img/back.png) no-repeat;	
+	background-position: left center;
+	background-size: 10px;
+}
+body > section[data-route="game"] > header > h1 {
+	float: right;
+	margin: 0 4% 0 0;
+	font-size: 0.8em;
+	font-weight: bold;	
+	color: #fff;
+}
+body > section[data-route="game"] > section {
+	text-align: center;
+	padding-top: 1em;	
+}
+body > section[data-route="game"] > section > input[type="number"] {
+	font-size: 1.4em;	
+	border-style: none;
+	border: 1px solid #ccc;
+	padding: 0.2em;
+	width: 2em;
+	text-align: center;
+}
+body > section[data-route="game"] > section > input[type="submit"],  body > section[data-route="game"] > section > input[type="number"] {
+	display: block;
+	clear: both;
+	margin: 1em auto;
+}
+
+/* CUSTOMS */
+
+#loading {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.5);
+	color: #fff;
+}
+#loading > img {
+	display: block;
+	position: absolute;  
+	color: #fff;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	height: 100px;
+	width: 100px;
+	margin-left: -50px;
+	margin-top: -50px;
+}
+#update_score {
+	margin-top: 1em;
+	width: 12em;
+	color: #fff;
+	padding: 0.8em;
+	background-color: #333;
+	border-style: none;	
+	clear: both;
+	font-weight: bold;
+}
+#update_score:hover {
+	cursor:pointer;	
+}
+#feedback {
+	display: none;
+	margin-top: 2em;
+	color: #333;
+	background: #ebebeb;
+	padding: 2em;
+	font-weight: bold;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#left_swipe_trig {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3%;	
+	background-color: #F00;
+	opacity: 0;
+}
+#right_swipe_trig {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 3%;	
+	background-color: #F00;	
+	opacity: 0;
+}
+#left_swipe_trig:hover, #right_swipe_trig:hover {
+	cursor: pointer;
+}
+.back_to_top {
+	border-style: none;
+	background-color: #469DFF;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+.back_to_top:hover {
+	cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 420px) { 
+	body > header > h1 {
+		font-size: 1.25em;	
+	}
+	body > section[data-route="game"] > header > h1 { 
+		display: none;
+	}
+}
+
+
